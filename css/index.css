@@ -20,7 +20,7 @@ header {
     width: 100%;
     background-image: url('../assets/img/NN2.png');
     background-position: center;
-    background-size: 550px;
+    background-size: 600px;
     background-position-y: -55px;
     background-repeat: no-repeat;
     height: 100vh;
@@ -99,6 +99,7 @@ header::before {
     text-align: center;
     font-family: var(--font-family-hedvig);
     text-transform: capitalize;
+    color: #F11A7B;
 }
 .section-two--container-title p{
     font-size: 1rem;
@@ -110,36 +111,70 @@ header::before {
 .section-two--image{
     display: grid;
     grid-template-columns: repeat(1,1fr);
-    justify-content: center;
+    justify-items: center;
     gap: 1rem;
     padding-top: 2rem;
 }
 .section-two--image img{
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     border-radius: .3rem;
 }
 
-/* section-three */
 
-.section-three {
+/* section reel */
+
+.section-reel {
     width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    
 }
-.section-three-container {
-    margin: 0 auto;
-    max-width: 1000px;
+.section-reel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    filter: blur(1px);
+    z-index: 2;
+}
+.section-reel--container {
+    max-width: 100%;
+    margin: 0 auto;  
+}
+.section-reel video {
+    width: 100%;
+    position: relative;
+    opacity: 90%;
+}
+
+.title-reel {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
 }
-
-.section-three-disco {
-    display: inline-block;
-    width: 100%;
-    height: 300px;
-    background-image: url('../assets/img/2.png');
-    background-position: center;
-    background-position-x: -3rem;
-    background-repeat: no-repeat;
-    background-size: contain;
+.title-reel h2 {
+    font-family: var(--font-family-montecarlo);
+    font-size: 3rem;
+    color: #F11A7B;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+}
+.title-reel p {
+    font-family: var(--font-family-hedvig);
+    font-size: 1rem;
+    color:var(--color-white-on);
+    text-transform: capitalize;
+    letter-spacing: 2px;
 }
