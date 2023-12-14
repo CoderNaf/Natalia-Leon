@@ -209,7 +209,7 @@ menu{
     justify-content: center;
 }
 .section-shows--title {
-    font-size: .7rem;
+    font-size: .5rem;
     font-family: var(--font-family-hedvig);
     color: #F11A7B;
     text-transform: capitalize;
@@ -273,6 +273,7 @@ menu{
 .section-band {
     width: 100%;
     margin-top: 2rem;
+    background-color: #fce7f0;
 }
 .section-band--container {
     max-width: 1100px;
@@ -285,7 +286,7 @@ menu{
 }
 
 .section-band--title h2{
-    font-size: 1rem;
+    font-size: .7rem;
     font-family: var(--font-family-hedvig);
     color: #F11A7B;
     text-transform: capitalize;
@@ -346,6 +347,7 @@ menu{
     letter-spacing: 3px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .section-ban--content div p span {
     margin-left: .2rem;
