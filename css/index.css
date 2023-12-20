@@ -9,6 +9,7 @@
     --color-white-alternative:#FFF6F6;
     --font-family-montecarlo:'MonteCarlo', cursive;
     --font-family-hedvig:'Hedvig Letters Serif', serif;
+    --font-family-popins:'Poppins', sans-serif;
 }
 
 *{
@@ -79,7 +80,7 @@ menu{
 .section-one  p{
     font-size: 1rem;
     color: var(--color-white-on);
-    font-family: var(--font-family-hedvig);
+    font-family: var(--font-family-popins);
     z-index: 1;
     text-transform: capitalize;
     letter-spacing: 4px;
@@ -101,11 +102,12 @@ menu{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    justify-content: center;
 }
 .section-two--container-title h2{
     font-size: 1.8rem;
     text-align: center;
-    font-family: var(--font-family-hedvig);
+    font-family: var(--font-family-popins);
     text-transform: capitalize;
     color: #F11A7B;
 }
@@ -115,6 +117,15 @@ menu{
     font-family: var(--font-family-hedvig);
     text-transform: capitalize;
     line-height: 1.7rem;
+}
+.section-two--container .section-two--container-title span{
+    display: inline-block;
+    width: auto;
+    height: 75px;
+    background-image: url('../assets/img/fimra.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 250px;
 }
 .section-two--image{
     display: grid;
@@ -181,7 +192,7 @@ menu{
     letter-spacing: 4px;
 }
 .title-reel p {
-    font-family: var(--font-family-hedvig);
+    font-family: var(--font-family-popins);
     font-size: 1rem;
     color:var(--color-white-on);
     text-transform: capitalize;
@@ -210,7 +221,7 @@ menu{
 }
 .section-shows--title {
     font-size: .5rem;
-    font-family: var(--font-family-hedvig);
+    font-family: var(--font-family-popins);
     color: #F11A7B;
     text-transform: capitalize;
     background-color: #f898c3;
@@ -228,7 +239,7 @@ menu{
 }
 .shows-video p{
     font-size: 1rem;
-    font-family: var(--font-family-hedvig);
+    font-family: var(--font-family-popins);
     line-height: 1.7rem;
     font-weight: 500;
 }
@@ -274,6 +285,7 @@ menu{
     width: 100%;
     margin-top: 2rem;
     background-color: #fce7f0;
+    padding-block: 4rem;
 }
 .section-band--container {
     max-width: 1100px;
@@ -287,7 +299,7 @@ menu{
 
 .section-band--title h2{
     font-size: .7rem;
-    font-family: var(--font-family-hedvig);
+    font-family: var(--font-family-popins);
     color: #F11A7B;
     text-transform: capitalize;
     background-color: #f898c3;
@@ -340,7 +352,7 @@ menu{
 }
 .section-ban--content div p {
     font-size: 1rem;
-    font-family: var(--font-family-hedvig);
+    font-family: var(--font-family-popins);
     text-transform: capitalize;
     color:var(--color-white-on);
     z-index: 2;
@@ -364,4 +376,150 @@ menu{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+/* section form */
+
+.section-form {
+    width: 100%;
+    margin-block: 3rem;
+}
+.section-form--container {
+    width: 100%;
+    padding: 1rem;
+    max-width: 900px;
+    margin:  0 auto;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+}
+.section-form--container div h2{
+    font-size: 2.2rem;
+    font-family: var(--font-family-popins);
+    text-transform: capitalize;
+
+}
+.section-form--container div p{
+    font-size: 1.2rem;
+    font-family: var(--font-family-popins);
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+
+/* section redes */
+
+.sectio-redes {
+    width: 100%;
+    background-color: #fadde9;
+    padding-block: 2rem;
+}
+.section-redes-container {
+    padding: 1rem;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: .7rem;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+}
+.section-redes-container p{
+    font-family: var(--font-family-popins);
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+
+/* window */
+
+.window-background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(4px);
+    background-color:rgba(255,255,255,0.3);
+    z-index: 999;
+    display:none;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+    padding: 1rem;
+}
+.window-container {
+    width: 100%;
+    position: relative;
+    max-width: 600px;
+    background-color: var(--color-white-on);
+    border-radius: .5rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    animation: modal .5s;
+    box-shadow: 0 5px 15px -5px rgba(0,0,0,.4);
+}
+@keyframes modal {
+    from{
+        transform: translateY(50vh);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+.close{
+    transition: transform 1s cubic-bezier(0, -0.42, 1, -41);
+    transform: translateY(60vh);
+}
+.window-container h2{
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--color--one);
+    font-family: var(--font-family-popins);
+}
+.window-container p{
+    font-size: 1.2rem;
+    color:var(--color-principal-four);
+    text-transform: capitalize;
+    margin-bottom: 1.2rem;
+    font-family: var(--font-family-popins);
+}
+.window-container .button-info--modal{
+    padding: .7rem;
+    font-family: var(--font-family-popins);
+    background-color: var(--color-principal-one-poin);
+    color:var(--color-principal-one);
+    text-transform: capitalize;
+    font-weight: 500;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .2s;
+}
+.window-container .button-info--modal:hover{
+    box-shadow: 4px 4px 1px rgba(0,0,0,.4);
+    transition: .2s;
+}
+.window-container .button-info--modal:active{
+    transform: translateY(2px);
+    box-shadow: none;
+}
+.close-button {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    background-color: var(--color-principal-one-poin);
+    border: solid 2px var(--color-white-on);
+    padding: .5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
 }
